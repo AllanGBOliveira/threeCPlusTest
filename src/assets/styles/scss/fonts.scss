@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'CerebriSansPro-Bold';
+  font-weight: normal;
+  src:
+    local('CerebriSansPro-Bold'),
+    url(@/assets/fonts/CerebriSansPro-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'CerebriSansPro-Bold';
+  font-style: normal;
+  src:
+    local('CerebriSansPro-Bold'),
+    url(@/assets/fonts/CerebriSansPro-Bold.otf) format('opentype');
+}
+
