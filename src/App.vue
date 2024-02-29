@@ -7,7 +7,7 @@ import HelloWorld from './components/HelloWorld.vue'
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
+    <div class="wrapper scss-test">
       <HelloWorld msg="You did it!" />
 
       <nav>
@@ -21,6 +21,8 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
+@import "@/assets/styles/scss/style.module.scss";
+
 header {
   line-height: 1.5;
   max-height: 100vh;
