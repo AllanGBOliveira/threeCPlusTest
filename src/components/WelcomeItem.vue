@@ -1,5 +1,5 @@
 <template>
-  <div class="item">
+  <div class="item the-welcome-test">
     <i>
       <slot name="icon"></slot>
     </i>
@@ -13,6 +13,8 @@
 </template>
 
 <style scoped>
+@import "@/assets/styles/scss/components/theWelcome.module.scss";
+
 .item {
   margin-top: 2rem;
   display: flex;
