@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Abner José Campos",
+    "avatar": "@/public/images/avatar-00",
+    "msg": "Então, vou pagar dia 6 as duas horas da tarde, tudo bem por você?",
+    "file": null,
+    "image": null,
+    "date": "29-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  },
+  {
+    "name": "Elaine Da Silva",
+    "avatar": "@/public/images/avatar-01",
+    "msg": "Foi você que me ligou?",
+    "file": null,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": false,
+      "quantity": 16
+    }
+  },
+  {
+    "name": "Camila Aparecida",
+    "avatar": "@/public/images/avatar-02",
+    "msg": null,
+    "file": null,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": false,
+      "quantity": 16
+    }
+  },
+  {
+    "name": "Jose Batista Souza",
+    "avatar": "@/public/images/avatar-03",
+    "msg": null,
+    "file": true,
+    "image": null,
+    "date": "29-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  },
+  {
+    "name": "Léia De Souza Bueno",
+    "avatar": "@/public/images/avatar-04",
+    "msg": "Meu pagamento caiu ai?",
+    "file": null,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": false,
+      "quantity": 3
+    }
+  },
+  {
+    "name": "Júlio Santos",
+    "avatar": "@/public/images/avatar-05",
+    "msg": null,
+    "file": null,
+    "image": "@/public/images/image-00",
+    "date": "13-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  },
+  {
+    "name": "Julio Cesar Lopes",
+    "avatar": "@/public/images/avatar-06",
+    "msg": "Meu pagamento caiu ai?",
+    "file": null,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  },
+  {
+    "name": "Carlos Tozeli",
+    "avatar": "@/public/images/avatar-07",
+    "msg": "Meu pagamento caiu ai?",
+    "file": null,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  },
+  {
+    "name": "Grasielle Castro",
+    "avatar": "@/public/images/avatar-08",
+    "msg": "Posso mandar áudio?",
+    "file": null,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  },
+  {
+    "name": "Ítala Farias",
+    "avatar": "@/public/images/avatar-09",
+    "msg": null,
+    "file": true,
+    "image": null,
+    "date": "13-02-2024",
+    "displayed": {
+      "value": true,
+      "quantity": 0
+    }
+  }
+]

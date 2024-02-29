@@ -1,6 +1,20 @@
+<script lang="ts">
+import friendsData from "@/assets/fakeApi/friends.json"
+
+export default {
+  data() {
+    return {
+      friends: friendsData,
+    };
+  },
+};
+</script>
+
 <template>
   <div class="about about-test">
-    <h1>This is an about page</h1>
+    <div v-for="friend in friends" :key="friend.name">
+      {{ friend.name }}
+    </div>
   </div>
 </template>
 
