@@ -1,18 +1,10 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import "@/assets/styles/css/reset.css";
+import { RouterView } from 'vue-router'
+import styles from "@/assets/styles/scss/layout.module.scss"
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper scss-test">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div :class="styles['wrapper-container']">
+    <RouterView />
+  </div>
 </template>

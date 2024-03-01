@@ -10,6 +10,7 @@ import chatsData from "@/assets/fakeApi/friends.json"
             <img :src="chat.avatar" :alt="chat.name" width="40" height="40" loading="eager">
         </div>
         <div>
+            {{ $t("message.welcome") }}
             <p :class="style['chatComponent-name']">
                 {{ chat.name }}
             </p>
