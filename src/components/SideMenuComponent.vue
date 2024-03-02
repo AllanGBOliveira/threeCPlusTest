@@ -1,9 +1,19 @@
 <script lang="ts" setup>
+import styles from "@/assets/styles/scss/components/sideMenuComponent.module.scss"
 </script>
 
 <template>
-    <div>
+    <div :class="styles['sideMenu-container']">
+        <p :class="styles['sideMenu-title']">
+            {{ $t("message.titles.omni") }}
+        </p>
         
+
+        <form :class="styles['sideMenu-search']" novalidate>
+            <label for="search-input">
+            </label>
+        </form>
+
     </div>
 </template>
 
