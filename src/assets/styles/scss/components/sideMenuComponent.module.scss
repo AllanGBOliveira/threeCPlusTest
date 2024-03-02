@@ -1,16 +1,86 @@
 .sideMenu {
   &-container {
     display: block;
+    padding-top: 16px;
   }
 
   &-logo {
     display: block;
     width: 100%;
     height: auto;
+    padding-left: 12px;
+    padding-right: 12px;
     margin-bottom: 45px;
   }
 
   &-item {
     display: block;
+    margin-bottom: 18px;
+  }
+
+  &-list {
+    display: block;
+  }
+
+  &-link {
+    display: block;
+    font-size: $font-size;
+    background-color: transparent;
+    border: 0;
+    padding: 4px 0;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    color: $color-muted;
+    transition: all 0.25s ease;
+
+    &-phone {
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        background-color: currentColor;
+        border-radius: 50%;
+        transition: all 0.25s ease;
+      }
+      
+      &.active,
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        &::after {
+          background-color: $warning-color;
+        }
+      }
+
+    }
+
+    &::before {
+      content: '';
+      height: 0;
+      width: 2px;
+      background-color: $warning-color;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.25s ease;
+    }
+
+    &.active,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: $color-3;
+
+      outline: none;
+      &::before {
+        height: 100%;
+      }
+    }
   }
 }
