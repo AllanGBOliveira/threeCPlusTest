@@ -1,0 +1,16 @@
+.sideBar {
+  &-container {
+    display: block;
+  }
+
+  &-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+  }
+
+  &-item {
+    display: block;
+  }
+}
