@@ -4,5 +4,8 @@
 
   "titles": {
     "omni": "Omnichannel 3C+"
+  },
+  "placeholder": {
+    "search": "Search"
   }
 }
