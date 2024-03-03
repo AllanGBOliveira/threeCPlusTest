@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ChatsView from '../views/ChatsView.vue'
+import GroupsView from '@/views/GroupsView.vue'
+import QueueView from '@/views/QueueView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +10,17 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: ChatsView
+    },
+
+    {
+      path: '/groups',
+      name: 'groups',
+      component: GroupsView
+    },
+    {
+      path: '/queue',
+      name: 'queue',
+      component: QueueView
     }
     // {
     //   path: '/about',
