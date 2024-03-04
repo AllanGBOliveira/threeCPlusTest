@@ -1,20 +1,25 @@
 {
-  "welcome": "Bem Vindo",
   "language": "pt-BR",
 
   "titles": {
     "omni": "Omnichannel 3C+"
   },
-
   "placeholder": {
     "search": "Pesquisar"
   },
-
   "components": {
     "tabs": {
       "chats": "Conversas",
       "groups": "Grupos",
       "queue": "Fila"
     }
+  },
+  "head": {
+    "agent": "Agente",
+    "finish": "Finalizar"
+  },
+
+  "chat": {
+    "title": "Responder ao cliente"
   }
 }

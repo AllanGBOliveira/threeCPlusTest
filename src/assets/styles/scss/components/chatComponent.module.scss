@@ -1,5 +1,7 @@
 .chatComponent {
   appearance: none;
+  background-color: transparent;
+  width: 100%;
   border: 0;
   border-radius: 0;
   display: flex;
@@ -7,6 +9,26 @@
   text-align: left;
   color: $color-1;
   font-family: 'CerebriSansPro';
+  transition: all 0.25s ease;
+  padding: 16px 8px;
+  border-radius: 10px;
+
+  &-active {
+    background-color: $color-muted-2;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active {
+    &:not(.chatComponent-active) {
+      background-color: $color-muted-3;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 4px;
+  }
 
   &-avatar {
     width: 40px;
@@ -34,5 +56,9 @@
     font-size: 0.875rem;
     line-height: 1rem;
     color: $color-3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }

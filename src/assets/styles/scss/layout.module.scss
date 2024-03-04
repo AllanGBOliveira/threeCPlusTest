@@ -1,9 +1,21 @@
 .wrapper-container {
+
+  background-color: #fff;
   width: 100%;
   height: 100%;
-  background-color: #fff;
   overflow: hidden;
   max-width: 100vw;
   max-height: 100vh;
   display: flex;
+  // flex-wrap: wrap;
+}
+
+.mainContent {
+  width: 100%;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .wrapper-container {
+   flex-direction: column;
+  }
 }
