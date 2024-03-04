@@ -10,20 +10,6 @@ const chats = useChatstore();
 
 
 chatsData.forEach(chat => {
-
-  // chats.userList.push({
-  //   "name": chat.name,
-  //   "avatar": chat.avatar,
-  //   "msg": chat.msg,
-  //   "file": false,
-  //   "image": false,
-  //   "date": new Date('29-04-1999'),
-  //   "displayed": {
-  //     "value": true,
-  //     "quantity": 0
-  //   }
-  // });
-
   chats.setInfo({
     "name": chat.name,
     "avatar": chat.avatar,
@@ -37,10 +23,6 @@ chatsData.forEach(chat => {
     }
   });
 });
-
-
-console.log(chats.info);
-
 </script>
 
 <template>

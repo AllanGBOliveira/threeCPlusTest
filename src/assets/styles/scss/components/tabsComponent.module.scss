@@ -1,9 +1,56 @@
 .tabsComponent {
   &-item {
-    display: block;
     padding-bottom: 4px;
     font-size: 1rem;
     line-height: 1rem;
     color: $color-1;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translatex(-50%);
+      transition: all 0.25s ease;
+      background-color: $color-2;
+    }
+
+    &-active,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: $color-2;
+    }
+
+    &-active {
+      &::after {
+        width: 100%;
+      }
+    }
   }
+}
+
+.notify-badge {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  min-height: 16px;
+  background-color: $color-muted-2;
+  color: $color-4;
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  font-weight: 500;
 }

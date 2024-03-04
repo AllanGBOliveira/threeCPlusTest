@@ -3,6 +3,14 @@ import styles from '@/assets/styles/scss/components/sideBarComponent.module.scss
 import { register } from 'swiper/element/bundle'
 
 import TabsComponent from './TabsComponent.vue'
+import ChatComponent from './ChatComponent.vue';
+
+import { useTabsStore } from '@/stores/tabs';
+
+const tabs = useTabsStore();
+
+const filteredTabs = JSON.parse(JSON.stringify(tabs.info))
+
 
 register()
 </script>
@@ -31,18 +39,19 @@ register()
       </div>
 
       <div :class="styles['tabs-container']">
-        <swiper-container :slidesPerView="3">
+        <swiper-container :slidesPerView="3" spaceBetween="12px">
           <swiper-slide>
-            <TabsComponent routePath="/" routeName="chats" />
+            <TabsComponent routePath="/" routeName="chats" :badge="filteredTabs.chats" />
           </swiper-slide>
           <swiper-slide>
-            <TabsComponent routePath="/groups" routeName="groups" />
+            <TabsComponent routePath="/groups" routeName="groups" :badge="filteredTabs.groups" />
           </swiper-slide>
           <swiper-slide>
-            <TabsComponent routePath="/queue" routeName="queue" />
+            <TabsComponent routePath="/queue" routeName="queue" :badge="filteredTabs.queue" />
           </swiper-slide>
         </swiper-container>
       </div>
     </div>
+    <ChatComponent />
   </div>
 </template>

@@ -4,12 +4,19 @@ import { RouterLink } from 'vue-router'
 
 defineProps<{
   routePath?: string
-  routeName?: string
+  routeName?: string,
+  badge?: number
 }>()
 </script>
 
 <template>
-  <RouterLink :class="styles['tabsComponent-item']" :to="`${routePath}`">
-    {{ $t(`message.components.tabs.${routeName}`) }}
+  <RouterLink :active-class="styles['tabsComponent-item-active']" :class="styles['tabsComponent-item']"
+    :to="`${routePath}`">
+    <span>
+      {{ $t(`message.components.tabs.${routeName}`) }}
+    </span>
+    <span v-if="badge" :class="styles['notify-badge']">
+      {{ badge }}
+    </span>
   </RouterLink>
 </template>

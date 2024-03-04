@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import style from '../assets/styles/scss/components/chatComponent.module.scss'
-import chatsData from '@/assets/fakeApi/friends.json'
+
+import { useChatstore } from '@/stores/chats'
+
+const chats = useChatstore();
+
+const filteredChats = JSON.parse(JSON.stringify(chats.info))
+
 </script>
 
 <template>
-  <button v-for="chat in chatsData" :key="chat.name" :class="style['chatComponent']">
+  <button v-for="chat in filteredChats" :key="chat.name" :class="style['chatComponent']">
     <div :class="`${style.chatComponent}-avatar`">
       <img :src="chat.avatar" :alt="chat.name" width="40" height="40" loading="eager" />
     </div>
