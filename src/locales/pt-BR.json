@@ -17,5 +17,9 @@
   "head": {
     "agent": "Agente",
     "finish": "Finalizar"
+  },
+
+  "chat": {
+    "title": "Responder ao cliente"
   }
 }

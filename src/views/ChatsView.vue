@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import styles from '@/assets/styles/scss/views/chats.module.scss'
+import ChatContentComponent from '@/components/ChatContentComponent.vue';
 
 import { useChatstore } from '@/stores/chats'
 
@@ -38,6 +39,37 @@ const currentChat = JSON.parse(JSON.stringify(chats.currentChat))
           <font-awesome-icon :icon="['fas', 'ellipsis']" />
         </button>
       </div>
+    </div>
+
+    <ChatContentComponent />
+    <div :class="styles['send-msg']">
+      <div :class="styles['send-msg-head']">
+        <p :class="styles['send-msg-title']">
+          {{ $t('message.chat.title') }}
+        </p>
+
+        <div :class="styles['send-msg-fabs']">
+          <button :class="styles['fab-item']">
+            <font-awesome-icon :icon="['far', 'note-sticky']" />
+          </button>
+          <button :class="styles['fab-item']">
+            <font-awesome-icon :icon="['far', 'face-smile']" />
+          </button>
+          <button :class="styles['fab-item']">
+            <font-awesome-icon :icon="['fas', 'paperclip']" />
+          </button>
+        </div>
+      </div>
+
+      <form :class="styles['msg-form']" novalidate>
+        <label for="msg-input">
+          <textarea :class="styles['msg-input']" type="text" name="msg-input" id="msg-input" />
+        </label>
+
+        <button type="submit">
+          <font-awesome-icon :icon="['far', 'paper-plane']" />
+        </button>
+      </form>
     </div>
   </div>
 </template>
