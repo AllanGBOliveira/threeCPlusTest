@@ -1,4 +1,5 @@
 export interface UserInfo {
+  id: Number
   name: String
   avatar: String
   msg?: String

@@ -1,35 +1,14 @@
 <script lang="ts" setup>
 import styles from '@/assets/styles/scss/components/sideBarComponent.module.scss'
-import { register } from 'swiper/element/bundle'
-
 import TabsComponent from './TabsComponent.vue'
 import ChatComponent from './ChatComponent.vue'
-
 import { useTabsStore } from '@/stores/tabs'
-import { onMounted } from 'vue'
 
 const tabs = useTabsStore()
 
 const filteredTabs = JSON.parse(JSON.stringify(tabs.info))
 
-onMounted(() => {
-  register()
-  const swiperEl = document.querySelector('swiper-container')
-  Object.assign(swiperEl, {
-    slidesPerView: 3,
-    spaceBetween: 12,
-    breakpoints: {
-      0: {
-        slidesPerView: 2,
-      },
-      320: {
-        slidesPerView: 3,
-      },
 
-    }
-  })
-  swiperEl?.initialize()
-})
 
 
 </script>
@@ -57,23 +36,19 @@ onMounted(() => {
         </button>
       </div>
 
-      <div :class="styles['tabs-container']">
-        <swiper-container init="false" style="max-width: calc(100% - 24px)">
-          <swiper-slide>
-            <TabsComponent routePath="/" routeName="chats" :badge="filteredTabs.chats" />
-          </swiper-slide>
-          <swiper-slide>
-            <TabsComponent routePath="/groups" routeName="groups" :badge="filteredTabs.groups" />
-          </swiper-slide>
-          <swiper-slide>
-            <TabsComponent routePath="/queue" routeName="queue" :badge="filteredTabs.queue" />
-          </swiper-slide>
-        </swiper-container>
+      <div :class="styles['tabs-wrapper']">
+        <div :class="styles['tabs-container']">
+          <TabsComponent routePath="/" routeName="chats" :badge="filteredTabs.chats" />
+          <TabsComponent routePath="/groups" routeName="groups" :badge="filteredTabs.groups" />
+          <TabsComponent routePath="/queue" routeName="queue" :badge="filteredTabs.queue" />
+        </div>
         <button :class="styles['tabs-btn']">
           <font-awesome-icon :icon="['fas', 'ellipsis']" />
         </button>
       </div>
     </div>
-    <ChatComponent />
+    <div :class="styles['chats-container']">
+      <ChatComponent />
+    </div>
   </div>
 </template>

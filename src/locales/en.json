@@ -1,5 +1,4 @@
 {
-  "welcome": "Welcome",
   "language": "en",
 
   "titles": {
@@ -7,5 +6,16 @@
   },
   "placeholder": {
     "search": "Search"
+  },
+  "components": {
+    "tabs": {
+      "chats": "Chats",
+      "groups": "Groups",
+      "queue": "Queue"
+    }
+  },
+  "head": {
+    "agent": "Agent",
+    "finish": "Finish"
   }
 }

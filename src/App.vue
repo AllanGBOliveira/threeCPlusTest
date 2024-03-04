@@ -9,8 +9,24 @@ import { watch, ref } from 'vue'
 
 const chats = useChatstore()
 
-chatsData.forEach((chat) => {
+chatsData.forEach((chat, key) => {
+  if (key === 0) {
+    chats.setCurrentChat({
+      id: chat.id,
+      name: chat.name,
+      avatar: chat.avatar,
+      msg: chat.msg,
+      file: chat.file,
+      image: chat.image,
+      date: new Date(chat.date),
+      displayed: {
+        value: chat.displayed.value,
+        quantity: chat.displayed.quantity
+      }
+    });
+  }
   chats.setInfo({
+    id: chat.id,
     name: chat.name,
     avatar: chat.avatar,
     msg: chat.msg,
@@ -23,6 +39,10 @@ chatsData.forEach((chat) => {
     }
   })
 })
+
+
+
+
 
 // const question = ref('')
 // const answer = ref('Questions usually contain a question mark. ;-)')
