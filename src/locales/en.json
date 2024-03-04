@@ -2,10 +2,12 @@
   "language": "en",
 
   "titles": {
-    "omni": "Omnichannel 3C+"
+    "omni": "Omnichannel 3C+",
+    "internal-note": "Internal note"
   },
   "placeholder": {
-    "search": "Search"
+    "search": "Search",
+    "msg": "Message"
   },
   "components": {
     "tabs": {

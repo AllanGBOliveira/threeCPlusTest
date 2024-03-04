@@ -10,8 +10,9 @@
   color: $color-1;
   font-family: 'CerebriSansPro';
   transition: all 0.25s ease;
-  padding: 16px 8px;
+  padding: 16px 75px 16px 8px;
   border-radius: 10px;
+  position: relative;
 
   &-active {
     background-color: $color-muted-2;
@@ -19,8 +20,7 @@
 
   &:hover,
   &:focus,
-  &:focus-visible,
-  &:active {
+  &:focus-visible {
     &:not(.chatComponent-active) {
       background-color: $color-muted-3;
     }
@@ -61,4 +61,22 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+}
+
+.msg-badge {
+  font-weight: 400;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 50%;
+  padding: 0;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-2;
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
 }
