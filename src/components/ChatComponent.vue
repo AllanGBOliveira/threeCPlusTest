@@ -26,5 +26,9 @@ const filteredChats = JSON.parse(JSON.stringify(chats.info))
         {{ chat.msg }}
       </p>
     </div>
+
+    <div v-if="!chat.displayed.value" :class="style['msg-badge']">
+      {{ chat.displayed.quantity }}
+    </div>
   </button>
 </template>

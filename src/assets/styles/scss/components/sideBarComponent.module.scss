@@ -73,8 +73,7 @@
 
       &:hover,
       &:focus,
-      &:focus-visible,
-      &:active {
+      &:focus-visible {
         outline: none;
         background-color: darken($color: $color-2, $amount: 10%);
       }
@@ -92,7 +91,7 @@
 
     &:hover,
     &:focus,
-    &:focus-visible &:active {
+    &:focus-visible {
       ::placeholder {
         color: $color-2;
       }
@@ -112,7 +111,7 @@
 
       &:hover,
       &:focus,
-      &:focus-visible &:active {
+      &:focus-visible {
         outline: none;
       }
     }
@@ -135,7 +134,6 @@
 }
 
 .tabs {
-
   &-wrapper {
     display: flex;
     justify-content: space-between;
@@ -164,7 +162,6 @@
     transition: all 0.25s ease;
     cursor: pointer;
 
-    &:active,
     &:hover,
     &:focus,
     &:focus-visible {

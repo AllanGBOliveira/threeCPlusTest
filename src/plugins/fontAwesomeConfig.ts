@@ -4,7 +4,8 @@ import {
   faMagnifyingGlass,
   faPlus,
   faEllipsis,
-  faPaperclip
+  faPaperclip,
+  faXmark
 } from '@fortawesome/free-solid-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import {
@@ -24,5 +25,6 @@ library.add(
   faPaperclip,
   faNoteSticky,
   faFaceSmile,
-  faPaperPlane
+  faPaperPlane,
+  faXmark
 )

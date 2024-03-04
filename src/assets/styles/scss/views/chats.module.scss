@@ -17,6 +17,7 @@
     border-radius: 0px 0px 16px 0px;
     border: 1px solid $color-muted-2;
     border-left-width: 0;
+    box-shadow: 0 -3px 3px rgba($color: #000, $alpha: 0.1);
   }
 
   &-card {
@@ -78,8 +79,7 @@
 
       &:hover,
       &:focus,
-      &:focus-visible,
-      &:active {
+      &:focus-visible {
         background-color: darken($color: $color-2, $amount: 10%);
       }
     }
@@ -92,8 +92,7 @@
 
       &:hover,
       &:focus,
-      &:focus-visible,
-      &:active {
+      &:focus-visible {
         background-color: darken($color: $color-muted-2, $amount: 10%);
         color: $color-1;
       }
@@ -141,10 +140,21 @@
 
       &:hover,
       &:focus,
-      &:focus-visible,
-      &:active {
+      &:focus-visible {
         background-color: $color-2;
         color: #fff;
+      }
+
+      &.note-active {
+        background-color: $color-7;
+        color: $color-8;
+
+        &:hover,
+        &:focus,
+        &:focus-visible {
+          background-color: $color-5;
+          color: $color-6;
+        }
       }
     }
   }
@@ -180,6 +190,15 @@
           outline: none;
         }
       }
+
+      &.note-active {
+        background-color: $color-5;
+
+        .msg-input {
+          color: $color-6;
+          background-color: $color-5;
+        }
+      }
     }
 
     button {
@@ -196,12 +215,18 @@
 
       &:focus,
       &:focus-visible,
-      &:hover,
-      &:active {
+      &:hover {
         outline: none;
         background-color: $color-2;
         color: #fff;
       }
     }
+  }
+}
+
+
+@media only screen and (max-width: 991.98px) {
+  .chat-head {
+    padding: 5px 12px;
   }
 }
