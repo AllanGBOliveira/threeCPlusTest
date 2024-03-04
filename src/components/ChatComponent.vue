@@ -3,10 +3,9 @@ import style from '../assets/styles/scss/components/chatComponent.module.scss'
 
 import { useChatstore } from '@/stores/chats'
 
-const chats = useChatstore();
+const chats = useChatstore()
 
 const filteredChats = JSON.parse(JSON.stringify(chats.info))
-
 </script>
 
 <template>

@@ -1,11 +1,12 @@
 .sideBar {
   &-container {
-    display: block;
+    display: inline-block;
     padding-top: 15px;
     border: 1px solid $color-muted-3;
     border-top: 0;
     border-bottom: 0;
-    min-width: 337px;
+    min-width: 336px;
+    max-width: 100%;
   }
 
   &-title {
@@ -19,7 +20,6 @@
 
   &-logo {
     display: block;
-    width: 100%;
     height: auto;
     margin-bottom: 45px;
   }
@@ -114,5 +114,35 @@
 }
 
 .tabs {
-  display: block;
+  &-container {
+    display: flex;
+    max-width: 100%;
+  }
+
+  &-btn {
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $color-1;
+    min-width: 16px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 0;
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      border: 0;
+      outline: none;
+      background-color: $color-2;
+      color: #fff;
+    }
+  }
 }

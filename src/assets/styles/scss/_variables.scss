@@ -3,7 +3,7 @@ $font-size: 1rem;
 $color-1: #373753;
 $color-2: #3057f2;
 $color-3: #1b1b2b;
-$color-4: #283E5D;
+$color-4: #283e5d;
 $color-muted: #677c92;
 $color-muted-2: #e1e9f4;
 $color-muted-3: #d9dce0;
@@ -12,3 +12,12 @@ $warning-color: #ffbb3a;
 $success-color: #5cb868;
 
 $font-1: 'CerebriSansPro';
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

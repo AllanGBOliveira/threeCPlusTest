@@ -3,16 +3,35 @@ import styles from '@/assets/styles/scss/components/sideBarComponent.module.scss
 import { register } from 'swiper/element/bundle'
 
 import TabsComponent from './TabsComponent.vue'
-import ChatComponent from './ChatComponent.vue';
+import ChatComponent from './ChatComponent.vue'
 
-import { useTabsStore } from '@/stores/tabs';
+import { useTabsStore } from '@/stores/tabs'
+import { onMounted } from 'vue'
 
-const tabs = useTabsStore();
+const tabs = useTabsStore()
 
 const filteredTabs = JSON.parse(JSON.stringify(tabs.info))
 
+onMounted(() => {
+  register()
+  const swiperEl = document.querySelector('swiper-container')
+  Object.assign(swiperEl, {
+    slidesPerView: 3,
+    spaceBetween: 12,
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 3,
+      },
 
-register()
+    }
+  })
+  swiperEl?.initialize()
+})
+
+
 </script>
 
 <template>
@@ -39,7 +58,7 @@ register()
       </div>
 
       <div :class="styles['tabs-container']">
-        <swiper-container :slidesPerView="3" spaceBetween="12px">
+        <swiper-container init="false" style="max-width: calc(100% - 24px)">
           <swiper-slide>
             <TabsComponent routePath="/" routeName="chats" :badge="filteredTabs.chats" />
           </swiper-slide>
@@ -50,6 +69,9 @@ register()
             <TabsComponent routePath="/queue" routeName="queue" :badge="filteredTabs.queue" />
           </swiper-slide>
         </swiper-container>
+        <button :class="styles['tabs-btn']">
+          <font-awesome-icon :icon="['fas', 'ellipsis']" />
+        </button>
       </div>
     </div>
     <ChatComponent />

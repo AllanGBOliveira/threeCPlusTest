@@ -5,30 +5,42 @@ import styles from '@/assets/styles/scss/layout.module.scss'
 import SideBarComponent from './components/SideBarComponent.vue'
 import chatsData from '@/assets/fakeApi/friends.json'
 import { useChatstore } from './stores/chats'
+import { watch, ref } from 'vue'
 
-const chats = useChatstore();
+const chats = useChatstore()
 
-
-chatsData.forEach(chat => {
+chatsData.forEach((chat) => {
   chats.setInfo({
-    "name": chat.name,
-    "avatar": chat.avatar,
-    "msg": chat.msg,
-    "file": chat.file,
-    "image": chat.image,
-    "date": new Date(chat.date),
-    "displayed": {
-      "value": chat.displayed.value,
-      "quantity": chat.displayed.quantity
+    name: chat.name,
+    avatar: chat.avatar,
+    msg: chat.msg,
+    file: chat.file,
+    image: chat.image,
+    date: new Date(chat.date),
+    displayed: {
+      value: chat.displayed.value,
+      quantity: chat.displayed.quantity
     }
-  });
-});
+  })
+})
+
+// const question = ref('')
+// const answer = ref('Questions usually contain a question mark. ;-)')
+const loading = ref(false)
+
+watch(loading, async (newVal, oldVal) => {
+  if (newVal) {
+    console.log(newVal, oldVal)
+  }
+})
 </script>
 
 <template>
   <div :class="styles['wrapper-container']">
     <SideMenuComponent />
     <SideBarComponent />
-    <RouterView />
+    <div :class="styles['mainContent']">
+      <RouterView />
+    </div>
   </div>
 </template>
